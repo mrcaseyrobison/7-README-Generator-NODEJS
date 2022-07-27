@@ -109,6 +109,35 @@ function renderLicenseSection(license) {
 function generateMarkdown(data) {
   return `# ${data.title}
 
+  ## Description
+
+  ${data.description}
+
+  ## Table of Contents
+  
+  * [Installation](#install)
+  * [Usage](#usage)
+  * [License](#license)
+  * [GitHub Repo](#repo)
+  * [Deployed App](#appLink)
+
+  ## Installation
+
+  ${data.install}
+
+  ## Usage
+
+  ${data.usage}
+
+  ## License
+
+  ${renderLicenseBadge(data.license)}
+
+  ## GitHub
+
+  My Github: [${data.repo}](https://github.com/${data.repo})\n
+
+  My Email: [${data.email}](mailto:${data.email}})
 `;
 }
 
