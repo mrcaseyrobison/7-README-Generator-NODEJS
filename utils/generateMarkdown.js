@@ -1,53 +1,55 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
+
 // License links found at: https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
 
 function renderLicenseBadge(license) {
   if (license.length === 0) {
     return ""
   } else if (license == "Apache") {
-    return `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`
+    return `![GitHub license](https://img.shields.io/badge/License-Apache_2.0-blue.svg)`
   } else if (license == "Boost") {
-    return `[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)`
+    return `![GitHub license](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)`
   } else if (license == "BSD") {
-    return `[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)`
+    return `![GitHub license](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)`
   } else if (license == "Creative Commons") {
-    return `[![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)](http://creativecommons.org/publicdomain/zero/1.0/)`
+    return `![GitHub license](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)`
   } else if (license == "Eclipse") {
-    return `[![License](https://img.shields.io/badge/License-EPL_1.0-red.svg)](https://opensource.org/licenses/EPL-1.0)`
+    return `![GitHub license](https://img.shields.io/badge/License-EPL_1.0-red.svg)`
   } else if (license == "GNU") {
-    return `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)`
+    return `![GitHub license](https://img.shields.io/badge/License-GPLv3-blue.svg)]`
   } else if (license == "Hippocratic") {
-    return `[![License: Hippocratic 2.1](https://img.shields.io/badge/License-Hippocratic_2.1-lightgrey.svg)](https://firstdonoharm.dev)`
+    return `![GitHub license](https://img.shields.io/badge/License-Hippocratic_2.1-lightgrey.svg)`
   } else if (license == "IBM") {
-    return `[![License: IPL 1.0](https://img.shields.io/badge/License-IPL_1.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)`
+    return `![GitHub license](https://img.shields.io/badge/License-IPL_1.0-blue.svg)`
   } else if (license == "ISC") {
-    return `[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)`
+    return `![GitHub license](https://img.shields.io/badge/License-ISC-blue.svg)]`
   } else if (license == "MIT") {
-    return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
+    return `![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)`
   } else if (license == "Mozilla") {
-    return `[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)`
+    return `![GitHub license](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)`
   } else if (license == "ODC BY") {
-    return `[![License: Open Data Commons Attribution](https://img.shields.io/badge/License-ODC_BY-brightgreen.svg)](https://opendatacommons.org/licenses/by/)`
+    return `![GitHub license](https://img.shields.io/badge/License-ODC_BY-brightgreen.svg)`
   } else if (license == "ODCbL") {
-    return `[![License: ODbL](https://img.shields.io/badge/License-ODbL-brightgreen.svg)](https://opendatacommons.org/licenses/odbl/)`
+    return `![GitHub license](https://img.shields.io/badge/License-ODbL-brightgreen.svg)`
   } else if (license == "PDDL") {
-    return `[![License: ODbL](https://img.shields.io/badge/License-PDDL-brightgreen.svg)](https://opendatacommons.org/licenses/pddl/)`
+    return `![GitHub license](https://img.shields.io/badge/License-PDDL-brightgreen.svg)`
   } else if (license == "Perl") {
-    return `[![License: Artistic-2.0](https://img.shields.io/badge/License-Perl-0298c3.svg)](https://opensource.org/licenses/Artistic-2.0)`
+    return `![GitHub license](https://img.shields.io/badge/License-Perl-0298c3.svg)`
   } else if (license == "SIL") {
-    return `[![License: Open Font-1.1](https://img.shields.io/badge/License-OFL_1.1-lightgreen.svg)](https://opensource.org/licenses/OFL-1.1)`
+    return `![GitHub license](https://img.shields.io/badge/License-OFL_1.1-lightgreen.svg)`
   } else if (license == "Unlicense") {
-    return `[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)`
+    return `![GitHub license](https://img.shields.io/badge/license-Unlicense-blue.svg)`
   } else if (license == "WTFPL") {
-    return `[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)`
+    return `![GitHub license](https://img.shields.io/badge/license-Unlicense-blue.svg)`
   } else if (license == "Zlib") {
-    return `[![License: Zlib](https://img.shields.io/badge/License-Zlib-lightgrey.svg)](https://opensource.org/licenses/Zlib)`
+    return `![GitHub license](https://img.shields.io/badge/License-Zlib-lightgrey.svg)`
   }
 }
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
+
 function renderLicenseLink(license) {
   if (license.length === 0) {
     return ""
@@ -97,10 +99,13 @@ function renderLicenseLink(license) {
 function renderLicenseSection(license) {
   if (license.length === 0) {
     return ""
-  } else {
-    return `## License
-    ${renderLicenseBadge(license)}
-    ${renderLicenseLink(license)}
+  } else { return `
+  
+  ## License
+
+  ${renderLicenseBadge(license)}
+
+  ${renderLicenseLink(license)}
     `
   }
 }
@@ -129,13 +134,11 @@ function generateMarkdown(data) {
 
   ${data.usage}
 
-  ## License
-
-  ${renderLicenseBadge(data.license)}
+  ${renderLicenseSection(data.license)}
 
   ## GitHub
 
-  My Github: [${data.repo}](https://github.com/${data.repo})\n
+  My Github: [${data.repo}](https://github.com/${data.repo})
 
   My Email: [${data.email}](mailto:${data.email}})
 `;
