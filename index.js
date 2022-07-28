@@ -54,16 +54,18 @@ const questions = [
         }
     },
    
-    {type: 'checkbox',
+    // Checkbox displays a list of options for the user to choose. User can only use 1 prompt at the moment, not sure why.
+    {type: 'list',
     name: 'license',
     message: 'White license is used for this project?',
     choices: ['Apache', 'Boost', 'BSD', 'Creative Commons', 'Eclipse', 'GNU', 'Hippocratic', 'IBM', 'ISC', 'MIT', 'Mozilla', 'OCD BY', 'OCDbL', 'PDDL', 'Perl', 'SIL', 'Unlicense', 'WTFPL', 'Zlib'],
         validate: choicesLength => {
             if(choicesLength.length <= 1) {
                 return true;
-            } else {
-                console.log("You must provide a response")
-                return false;
+            } else  {
+                if(choicesLength.length > 1) {
+                    return true;
+                }
             }
         }
     },
@@ -94,9 +96,9 @@ const questions = [
 
 ];
 
-// TODO: Create a function to write README file
+// Function to write README file
 function writeToFile(fileName, data) {
-    fs.writeFile('./dist/README.md', generateMarkdown(data), function(err) {
+    fs.writeFile('./dist/GENERATED_README.md', generateMarkdown(data), function(err) {
         if (err) {
             return console.log(err);
         }
@@ -104,7 +106,7 @@ function writeToFile(fileName, data) {
     })
 }
 
-// TODO: Create a function to initialize app
+// Function to initialize app
 function init() {
     inquirer.prompt(questions)
     .then(function(answer) {
@@ -113,5 +115,5 @@ function init() {
     })
 }
 
-// Function call to initialize app
+// Call the function to initialize app
 init();
