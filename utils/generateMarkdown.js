@@ -6,6 +6,8 @@
 function renderLicenseBadge(license) {
   if (license.length === 0) {
     return ""
+  } else if (license == "No License") {
+    return ""
   } else if (license == "Apache") {
     return `![GitHub license](https://img.shields.io/badge/License-Apache_2.0-blue.svg)`
   } else if (license == "Boost") {
@@ -52,6 +54,8 @@ function renderLicenseBadge(license) {
 
 function renderLicenseLink(license) {
   if (license.length === 0) {
+    return ""
+  } else if (license == "No License") {
     return ""
   } else if (license == "Apache") {
     return `https://opensource.org/licenses/Apache-2.0`

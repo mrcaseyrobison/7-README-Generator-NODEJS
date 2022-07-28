@@ -1,14 +1,23 @@
 {
-  "name": "static-site",
+  "name": "7-readme-generator-nodejs",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrcaseyrobison/7-README-Generator-NODEJS.git"
+  },
+  "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrcaseyrobison/7-README-Generator-NODEJS/issues"
+  },
+  "homepage": "https://github.com/mrcaseyrobison/7-README-Generator-NODEJS#readme",
   "dependencies": {
-    "inquirer": "8.2.4"
+    "inquirer": "^8.2.4"
   }
 }
