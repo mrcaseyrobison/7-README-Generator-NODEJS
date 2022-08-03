@@ -104,7 +104,7 @@ inquirer
 
   .then((answers) => {
     const README = generateMarkdown(answers);
-    fs.writeFile("./dist/generated_readme.md", README, (err) =>
+    fs.writeFile("MY_README.MD", README, (err) =>
       err ? console.log(err) : console.log("Readme Successfully Generated")
     );
   });
